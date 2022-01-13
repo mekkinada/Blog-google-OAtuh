@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col s12 m8">
+        <h3>{{code.title}}
+            <small>{{{editIcon code.user user code._id false}}}</small>
+        </h3>
+        <div class="card code">
+            <div class="card-content">
+                <span class="card-title">{{formatDate date 'MMMM Do YYYY, h:mm:ss a'}}</span>
+                {{{code.body}}}
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m4">
+        <div class="card center-align">
+            <div class="card-content">
+                <span class="card-title">{{code.user.displayName}}</span>
+                <img src="{{code.user.image}}" class="circle responsive-img img-small">
+            </div>
+            <div class="card-action">
+                <a href="/dEVproject/user/{{code.user._id}}">More From {{code.user.firstName}}</a>
+            </div>
+        </div>
+    </div>
+</div>
